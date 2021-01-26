@@ -11,6 +11,9 @@ import { selectUser } from './features/userSlice';
 import { selectChannelId, selectChannelName } from './features/appSlice';
 import db from './firebase';
 import firebase from 'firebase';
+require('firebase/auth')
+
+//import DeleteIcon from '@material-ui/icons/Delete';
 
 function Chat() {
     const user = useSelector(selectUser);
@@ -40,9 +43,23 @@ function Chat() {
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             message: input,
             user: user,
+            
         });
         setInput("");
-    }
+    };
+
+    // const removeProject = (channelId) =>{
+    //     const projectRef= db.collection("channels").doc(channelId).collection("messages")
+    //     .delete();
+    //   }
+
+    // const removeProject = (e) =>{
+    //     firebase.delete({ collection: 'channels', doc:`${channelId}` }).then((response) => {
+    //        console.log('delete response', response)
+    //     }).catch((error) => {
+    //       console.log('delete error', error)
+    //    })
+    //  }
 
     return (
         <div className="chat">
@@ -51,11 +68,17 @@ function Chat() {
             <div className="chat__messages">
                 {messages.map(message => (
                     <Message 
+                    DeleteIcon={messages.DeleteIcon}
                     timestamp={message.timestamp}
                     message={message.message}
                     user = {message.user}
-                    />
+                     />
+                     
+                     
                 ))}
+                
+                {/* <button className="del__button" type="submit" onClick={removeProject}>remove</button> */}
+                
             </div>
 
             <div className="chat__input">
