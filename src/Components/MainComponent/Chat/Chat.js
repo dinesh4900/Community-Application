@@ -18,6 +18,8 @@ function Chat() {
     const [input, setInput] = useState("");
     const [messages,setMessages] = useState([]);
 
+    // const [file, setFile] = useState("")
+
     useEffect(() => {
         if(channelId){
             db.collection("channels")
@@ -39,11 +41,17 @@ function Chat() {
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             message: input,
             user: user,
+            // image: file,
             
         });
         setInput("");
+        // setFile("")
     };
 
+
+    // function handleUpload(event){
+    //     setFile(event.target.files[0]);
+    // }
 
     
 
@@ -63,19 +71,22 @@ function Chat() {
                      
                 ))}
                 
-                {/* <button className="del__button" type="submit" onClick={removeProject}>remove</button> */}
-                
+               
             </div>
 
             <div className="chat__input">
                 {/* <AddCircleIcon fontSize="large" /> */}
                 <form>
-                    <input 
+                    <input  
                         value={input} 
                         disabled={!channelId}
                         onChange={(e) => setInput(e.target.value)} 
                         placeholder={`Message #${channelName}`}
                     />
+                    {/* <input 
+                        type="file" 
+                        value={file}
+                        onChange={(e) => setFile(e.target.value)}/> */}
                     <button className="chat__inputButton" type="submit" onClick={sendMessage}>send message</button>
                 </form>
 

@@ -7,6 +7,11 @@
     color: #000000 !important;
 }
 
+.sidebar__mainHeader{
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
 .sidebar__top{
     display: flex;
     justify-content: space-between;

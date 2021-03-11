@@ -14,6 +14,7 @@ function Message({timestamp, user, message}) {
                     </span></h4>
                                 
                 <p>{message}</p>
+                {/* <img src={image}/> */}
             </div>
         </div>
     )
