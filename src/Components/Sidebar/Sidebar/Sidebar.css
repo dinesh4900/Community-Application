@@ -1,71 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,400;1,700&display=swap');
+
+
+
 .sidebar{
     display: flex;
-    flex-direction: column;
-    flex: 0.25;
-    height: 100vh;
-    background-color: #ffffff;
-    color: #000000 !important;
+    background-color: #3aa8f1;
 }
 
-.sidebar__mainHeader{
-    border-bottom: 1px solid black;
-    text-align: center;
-}
-
-.sidebar__top{
+.sidebar__left{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #ffffff;
-    color: #000000;
-    border-bottom: 1px solid #000000;
+    flex: 0.9;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-left: 20px;
 }
 
-.sidebar__channels{
-    flex: 1;
-}
 
-.sidebar__addChannel{
-    color: #000000;
-    cursor: pointer;
-}
-
-.sidebar__channelsHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #ffffff;
-    color: #000000;
-    border-bottom: 1px solid black;
-}
-
-.sidebar__header{
-    display: flex;
-    align-items: center;
+.sidebar__left > h1 > span{
+    color: white;
 }
 
 
 .sidebar__profile{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #000000;
-    background-color: #ffffff;
-    padding: 10px;
-    border-top: 1px solid #000000
+    flex: 0.5;
 }
 
 .sidebar__profileInfo{
-    flex: 1;
-    padding: 10px;
+    margin-left: 10px;
 }
 
-.sidebar__profileIcons > .MuiSvgIcon-root{
-    padding: 10px;
+.sidebar__rightBtn{
+    margin-top: 9px;
+    width: 75px;
+    height: 25px;
+    margin-left: 30px;
+    background: transparent;
+    color: white;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
-.sidebar__channelsList{
-    color: white !important;
+.sidebar__rightBtn:hover{
+    background: #7dc7f8;
 }

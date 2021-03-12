@@ -9,6 +9,7 @@ import {selectUser} from './features/userSlice';
 import Login from './Login';
 import { auth } from './firebase';
 import { login,logout } from './features/userSlice'
+import Header from './Components/Header/Header';
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ function App() {
     <div className="app">
       {user ? (
         <>
+          
           <Sidebar />
           <Chat />
         </>

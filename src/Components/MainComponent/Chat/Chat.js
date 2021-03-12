@@ -20,25 +20,24 @@ function Chat() {
 
     const [tweetImage, setTweetImage] = useState("");
 
-    // const [file, setFile] = useState("")
 
     useEffect(() => {
-        if(channelId){
+        
             db.collection("channels")
-                .doc(channelId)
-                .collection("messages")
+                
+                
                 .orderBy('timestamp','desc')
                 .onSnapshot((snapshot) => 
                     setMessages(snapshot.docs.map((doc) => doc.data()))
                 );
-        }
+        
        
-    }, [channelId]);
+    }, []);
 
     const sendMessage = (e) => {
         e.preventDefault();
 
-        db.collection("channels").doc(channelId).collection("messages")
+        db.collection("channels")
         .add({
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             message: input,
@@ -81,13 +80,12 @@ function Chat() {
             </div>
 
             <div className="chat__input">
-                {/* <AddCircleIcon fontSize="large" /> */}
+                
                 <form>
                     <input  
                         value={input} 
-                        disabled={!channelId}
                         onChange={(e) => setInput(e.target.value)} 
-                        placeholder={`Message #${channelName}`}
+                        placeholder="Type a Message"
                     />
                     <input 
                         onChange={(e) => setTweetImage(e.target.value)}

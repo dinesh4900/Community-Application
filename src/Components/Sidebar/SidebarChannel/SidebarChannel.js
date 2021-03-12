@@ -7,7 +7,7 @@ function SidebarChannel({id, channelName}) {
 
     const dispatch = useDispatch();
     return (
-
+                
        
             <div 
             className="sidebarChannel" 

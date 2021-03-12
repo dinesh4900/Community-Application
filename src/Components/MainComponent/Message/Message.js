@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 import './Message.css'
 import { Avatar } from '@material-ui/core';
-import { Component } from 'react';
+// import { Component } from 'react';
 
 
 const Message = forwardRef(({
@@ -15,8 +15,7 @@ const Message = forwardRef(({
             <Avatar src={user.photo}/>
             <div className="message__info">
                 <h4>
-                    hello
-                    {/* {user.displayName} */}
+                    {user.displayName}
                     <span className="message__timestamp">
                         {new Date(timestamp?.toDate()).toUTCString()}    
                     </span>
