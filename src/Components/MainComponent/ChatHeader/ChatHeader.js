@@ -11,20 +11,7 @@ function ChatHeader({channelName}) {
                 </h3>
             </div>
 
-            {/* <div className="chatHeader__right">
-                <NotificationsIcon />
-                <EditLocationRoundedIcon />
-                <PeopleAltRoundedIcon />
-
-                <div className="chatHeader__search">
-                    <input placeholder="search" />
-                    <SearchRoundedIcon />
-                </div>
-
-                <SendRoundedIcon />
-                <HelpRoundedIcon />
-
-            </div> */}
+            
         </div>
     )
 }

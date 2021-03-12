@@ -18,6 +18,8 @@ function Chat() {
     const [input, setInput] = useState("");
     const [messages,setMessages] = useState([]);
 
+    const [tweetImage, setTweetImage] = useState("");
+
     // const [file, setFile] = useState("")
 
     useEffect(() => {
@@ -41,10 +43,13 @@ function Chat() {
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             message: input,
             user: user,
+            image: tweetImage,
             // image: file,
             
         });
         setInput("");
+        setTweetImage("");
+
         // setFile("")
     };
 
@@ -66,6 +71,7 @@ function Chat() {
                         timestamp={message.timestamp}
                         message={message.message}
                         user = {message.user}
+                        image = {message.image}
                     />
                      
                      
@@ -83,6 +89,14 @@ function Chat() {
                         onChange={(e) => setInput(e.target.value)} 
                         placeholder={`Message #${channelName}`}
                     />
+                    <input 
+                        onChange={(e) => setTweetImage(e.target.value)}
+                        value={tweetImage}
+                        className="tweetBox__inputImage" 
+                        placeholder="Enter image url">
+                    </input>
+
+
                     {/* <input 
                         type="file" 
                         value={file}
@@ -90,11 +104,7 @@ function Chat() {
                     <button className="chat__inputButton" type="submit" onClick={sendMessage}>send message</button>
                 </form>
 
-                {/* <div className="chat__inputIcons">
-                    <CardGiftcardIcon />
-                    <GifIcon />
-                    <EmojiEmotionsIcon />
-                </div> */}
+             
             </div>
         </div>
     )

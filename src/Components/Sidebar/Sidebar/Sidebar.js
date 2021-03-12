@@ -32,7 +32,7 @@ function Sidebar() {
 
     return (
         <div className="sidebar">
-            <h2 className="sidebar__mainHeader">React Community</h2>
+        
            {/*  sidebar Header */ }
             <div className="sidebar__top">
                 <h3>{user.displayName.substring(0,8)}</h3>
