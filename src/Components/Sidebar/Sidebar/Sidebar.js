@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import './Sidebar.css';
-import AddIcon from '@material-ui/icons/Add';
-import SidebarChannel from '../SidebarChannel/SidebarChannel';
+// import AddIcon from '@material-ui/icons/Add';
+// import SidebarChannel from '../SidebarChannel/SidebarChannel';
 import { Avatar } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../../features/userSlice';

@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     flex: 0.75;
-    background-color: #fff;
-    height: 100vh;
+    background-color: #e2e2e2;
+    height: 97vh;
     border-left: 1px solid black;
 }
 
@@ -28,8 +28,7 @@
     justify-content: space-between;
     padding: 15px;
     margin: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
+    background-color: #e2e2e2;
 }
 
 .chat__input > form > input{
@@ -43,8 +42,11 @@
 }
 
 .chat__input > form {
+    
+    display: flex;
     flex: 1;
     border: 1px solid black;
+    border-radius: 5px;
 }
 
 .chat__inputButton{
