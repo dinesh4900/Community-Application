@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import './Chat.css';
+import './Chat.scss';
 // import ChatHeader from '../ChatHeader/ChatHeader';
 import Message from '../Message/Message';
 import { useSelector } from 'react-redux';
@@ -11,6 +11,7 @@ import firebase from 'firebase';
 import 'emoji-mart/css/emoji-mart.css'
 import { Picker } from 'emoji-mart'
 
+import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 
 
 
@@ -38,18 +39,6 @@ function Chat() {
                 );
     }, []);
 
-
-
-        let emojiPicker;
-        if (emojiPickerState) {
-            emojiPicker = (
-                <Picker
-                    title="Pick your emoji…"
-                    emoji="point_up"
-                    onSelect={emoji => SetMessage(message + emoji.native)}
-                />
-            );
-        }
         
         function triggerPicker(e) {
             e.preventDefault();
@@ -72,22 +61,8 @@ function Chat() {
     };
 
 
-
-
-
-   
-
-
-    // function handleUpload(event){
-    //     setTweetImage(event.target.files[0]);
-    // }
-
-   
-
     return (
         <div className="chat">
-            
-
             <div className="chat__messages">
                 {messages.map(message => (
                     <Message 
@@ -111,22 +86,13 @@ function Chat() {
                         onChange={(e) => setTweetImage(e.target.value)}
                         value={tweetImage}
                         className="tweetBox__inputImage" 
-                        placeholder="Enter image url">
-                    </input>
+                        placeholder="Enter image url" />
+                    
                     <input 
                         value={message}
                         onChange={e => SetMessage(e.target.value)}
                     />
-
-                    {emojiPicker}
-                    <button onClick={triggerPicker}>Add an Emoji!</button>
-
-
-                    {/* <input 
-                        type="file" 
-                        value={tweetImage}
-                        onChange={(e) => setTweetImage(e.target.value)}/> */}
-                    <button className="chat__inputButton" type="submit" onClick={sendMessage}>send message</button>
+                    <button className="chat__inputButton" type="submit" onClick={sendMessage}>send message</button>                 
                 </form>
 
                 

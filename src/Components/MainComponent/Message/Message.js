@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import './Message.css'
+import './Message.scss'
 import { Avatar } from '@material-ui/core';
 // import { Component } from 'react';
 
@@ -11,7 +11,7 @@ const Message = forwardRef(({
 }, ref) => {
     return (
         <div className="message">
-            <Avatar src={user.photo}/>
+            <Avatar className="message__avatar" src={user.photo}/>
             <div className="message__info">
                 <h4>
                     {user.displayName}
@@ -20,7 +20,7 @@ const Message = forwardRef(({
                     </span>
                 </h4>               
                 <p>{message}</p>
-                <img src={image} alt="" />
+                {image && <img src={image}  /> }    
             </div>
         </div>
     )
