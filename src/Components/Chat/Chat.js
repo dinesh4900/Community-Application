@@ -11,13 +11,11 @@ import 'emoji-mart/css/emoji-mart.css'
 require('firebase/auth');
 
 function Chat() {
-
     const user = useSelector(selectUser);
     const [input, setInput] = useState("");
     const [messages,setMessages] = useState([]);
     const [tweetImage, setTweetImage] = useState("");
     const [emojiPickerState, SetEmojiPicker] = useState(false);
-    // const [message, SetMessage] = useState("");
 
     useEffect(() => {
             db.collection("channels")
@@ -26,8 +24,6 @@ function Chat() {
                     setMessages(snapshot.docs.map((doc) => doc.data()))
                 );
     }, []);
-  
-
 
     const sendMessage = (e) => {
         e.preventDefault();
