@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&display=swap');
+
+@import '../../App.scss';
+
+.message{
+    display: flex;
+    padding: $twentypx; 
+}
+
+.message__info{
+    margin-left: $twentypx;
+    font-family: $montserrat;
+    font-weight: 600;
+}
+
+.message__avatar{
+    margin-top: $fivepx;
+}
+
+.message__info > h4{
+    color: #1e2e2d;
+    border-bottom: $border;
+}
+
+.message__info > p{
+    margin-left: $tenpx;
+    margin-top: $fivepx;
+}
+
+.message__info >img{
+    border-right: $border;
+    border-bottom: $border;
+    margin-top: $fivepx;
+    border-radius: $borderradius;
+    width: 200px;
+    height: 200px;
+}
+
+.message__timestamp{
+    color: #575757;
+    margin-left: $twentypx;
+    font-size: x-small;
+}
+
+.message__infoMessage{
+    font-family: $mulish;
+}

@@ -19,8 +19,8 @@ const Message = forwardRef(({
                         {new Date(timestamp?.toDate()).toUTCString()}    
                     </span>
                 </h4>               
-                <p>{message}</p>
-                {image && <img src={image}  /> }    
+                <p className="message__infoMessage">{message}</p>
+                {image && <img src={image} alt="" /> }    
             </div>
         </div>
     )

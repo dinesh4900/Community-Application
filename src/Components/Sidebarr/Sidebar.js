@@ -2,9 +2,8 @@ import React,{useEffect, useState} from 'react';
 import './Sidebar.scss';
 import { Avatar } from '@material-ui/core';
 import { useSelector } from 'react-redux';
-import { selectUser } from '../../../features/userSlice';
-import db, { auth } from '../../../firebase';
-
+import { selectUser } from '../../features/userSlice';
+import db, { auth } from '../../firebase';
 
 function Sidebar() {
     const user = useSelector(selectUser);
@@ -15,7 +14,6 @@ function Sidebar() {
             setChannels(snapshot.docs.map(doc => doc.data()))
         ))
         },[]);
-
 
     return (
         <div className="sidebar">
@@ -28,8 +26,6 @@ function Sidebar() {
                 <div className="sidebar__profileInfo">
                     <h3>{user.displayName.substring(0,8)}</h3>
                 </div>
-
-
             </div>
         </div>
     )

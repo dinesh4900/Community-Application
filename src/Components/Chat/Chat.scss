@@ -1,4 +1,6 @@
-@import '../../../App.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+@import '../../App.scss';
 
 $blackcolor: #000000;
 $backgroundcolor: #e2e2e2;
@@ -31,23 +33,24 @@ $backgroundcolor: #e2e2e2;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
-    margin: 20px;
+    padding: $fifteenpx;
+    margin: $twentypx;
     background-color: $backgroundcolor;
 }
 
 .chat__input > form > input{
-    padding: 15px;
+    padding: $fifteenpx;
     background-color: transparent;
     width: 100%;
     border: none;
     outline-width: 0;
     color: $blackcolor;
     font-size: large;
+    font-family: $montserrat;
+    font-weight: 600;
 }
 
 .chat__input > form {
-    
     display: flex;
     flex: 1;
     border: $border;
@@ -59,5 +62,5 @@ $backgroundcolor: #e2e2e2;
 }
 
 .chat__inputIcons > .MuiSvgIcon-root{
-    padding: 5px;
+    padding: $fivepx;
 }
