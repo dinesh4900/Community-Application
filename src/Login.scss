@@ -1,0 +1,16 @@
+.login{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    button {
+        width: 300px;
+        background-color: #738adb;
+        color: #eff2f5;
+        font-weight: 800;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+}

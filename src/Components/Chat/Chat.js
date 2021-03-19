@@ -45,7 +45,6 @@ function Chat() {
             <div className="chat__messages">
                 {messages.map(message => (
                     <Message 
-                        DeleteIcon={messages.DeleteIcon}
                         timestamp={message.timestamp}
                         message={message.message}
                         user = {message.user}

@@ -7,49 +7,46 @@ $textcolor: white;
 .sidebar{
     display: flex;
     background-color: #3aa8f1;
-}
-
-.sidebar__left{
-    display: flex;
-    flex: 0.9;
-    font-family: 'Nunito Sans', sans-serif;
-    margin-left: 20px;
-
-    h1{
-        span{
-            color: $textcolor;
+    .sidebar__left{
+        display: flex;
+        flex: 0.9;
+        font-family: 'Nunito Sans', sans-serif;
+        margin-left: 20px;
+    
+        h1{
+            span{
+                color: $textcolor;
+            }
         }
     }
+    .sidebar__profile{
+        display: flex;
+        flex: 0.5;
+        .sidebar__profileAvatar{
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+        .sidebar__profileInfo{
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .sidebar__profileBtn{
+            background-color: #3aa8f1;
+            border: 1px solid black;
+            border-radius: $fivepx;
+            outline: none;
+            margin-top: 7px;
+            margin-left: 90px;
+            height: 30px;
+            width: 80px;
+            &:hover{
+                background-color: #61c0ff;
+                transition: all 0.5s ease-in-out;
+            }
+        }  
+    }  
 }
 
 
 
-.sidebar__profile{
-    display: flex;
-    flex: 0.5;
-    .sidebar__profileAvatar{
-        margin-top: 3px;
-        margin-bottom: 3px;
-    }
-    .sidebar__profileInfo{
-        margin-left: 10px;
-        margin-top: 10px;
-    }   
-}
 
-
-// .sidebar__rightBtn{
-//     margin-top: 9px;
-//     width: 75px;
-//     height: 25px;
-//     margin-left: 30px;
-//     background: transparent;
-//     color: $textcolor;
-//     outline: none;
-//     border: $border;
-//     border-radius: 5px;
-// }
-
-// .sidebar__rightBtn:hover{
-//     background: #7dc7f8;
-// }

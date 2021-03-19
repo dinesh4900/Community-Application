@@ -22,10 +22,11 @@ function Sidebar() {
             </div>  
 
             <div className="sidebar__profile">
-                <Avatar className="sidebar__profileAvatar" onClick={() => auth.signOut()} src={user.photo} />
+                <Avatar className="sidebar__profileAvatar"  src={user.photo} />
                 <div className="sidebar__profileInfo">
                     <h3>{user.displayName.substring(0,8)}</h3>
                 </div>
+                <button className="sidebar__profileBtn" onClick={() => auth.signOut()} >LogOut</button>
             </div>
         </div>
     )

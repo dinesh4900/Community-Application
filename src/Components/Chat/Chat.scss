@@ -12,56 +12,48 @@ $backgroundcolor: #e2e2e2;
     background-color: $backgroundcolor;
     height: 97vh;
     border-left: $border;
-}
+    .chat__messages{
+        flex: 1;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }  
+    .chat__input{
+        color: $blackcolor;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $fifteenpx;
+        margin: $twentypx;
+        background-color: $backgroundcolor;
+        form {
+            display: flex;
+            flex: 1;
+            border: $border;
+            border-radius: $borderradius;
+            input{
+                padding: $fifteenpx;
+                background-color: transparent;
+                width: 100%;
+                border: none;
+                outline-width: 0;
+                color: $blackcolor;
+                font-size: large;
+                font-family: $montserrat;
+                font-weight: 600;
+                border-left: 1px solid black;
+            }
+            .chat__inputButton{
+                display: none;
+            }
+        }
+        
+    }
 
-.chat__messages{
-    flex: 1;
-    overflow: scroll;
-}
 
-.chat__messages::-webkit-scrollbar{
-    display: none;
-}
-
-.chat__messages{
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
+    }
 
 
-.chat__input{
-    color: $blackcolor;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: $fifteenpx;
-    margin: $twentypx;
-    background-color: $backgroundcolor;
-}
-
-.chat__input > form > input{
-    padding: $fifteenpx;
-    background-color: transparent;
-    width: 100%;
-    border: none;
-    outline-width: 0;
-    color: $blackcolor;
-    font-size: large;
-    font-family: $montserrat;
-    font-weight: 600;
-}
-
-.chat__input > form {
-    display: flex;
-    flex: 1;
-    border: $border;
-    border-radius: $borderradius;
-}
-
-.chat__inputButton{
-    display: none;
-}
-
-.chat__inputIcons > .MuiSvgIcon-root{
-    padding: $fivepx;
-}
